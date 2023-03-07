@@ -44,11 +44,11 @@ build-job:
 - git push
 
 ### 5. Check pipeline
-- https://gitlab.com/<username>/<project_name>/-/pipelines
-- if the pipeline failed due to *User validation required*,
+- `https://gitlab.com/<username>/<project_name>/-/pipelines`
+- if the pipeline failed due to **User validation required**,
   - Project Settings -> CI/CD -> Runners -> Click Expand
-  - https://gitlab.com/<username>/<project_name>/-/settings/ci_cd
-  - Disable the option *Enable shared runners for this project*
+  - `https://gitlab.com/<username>/<project_name>/-/settings/ci_cd`
+  - Disable the option **Enable shared runners for this project**
   - Copy registration token and send to the instructor with your family name (e.g. GR1348941xduQ8c1Bk1zuCDE7QkMp - gasataya)
   - Wait for the runners to be available
   - Rerun the pipeline
