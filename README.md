@@ -106,6 +106,7 @@ test-job1:
   - `npm install netlify-cli -g`
 - login: `netlify login`
 - create site: `netlify sites:create --disable-linking`
+  - Site name: `<lastname-cicd>` (e.g. `gasataya-cicd`)
 - copy and save details
 ```
 Site Created
@@ -136,5 +137,15 @@ deploy-job:
     - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir=./build --prod
 ```
 - add `image: node:18`
+  ```
+deploy-job:
+  stage: deploy
+  image: node:18
+  script:
+    - npm install
+    - npm install -g netlify-cli --unsafe-perm=true
+    - npm run build
+    - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir=./build --prod
+```
 
 ### Others: Update files and push
