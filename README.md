@@ -118,6 +118,7 @@ Site ID:   12345
 
 ### 9. Create Netlify auth token
 - https://app.netlify.com/user/applications
+  - Personal access tokens -> New Access Token
 
 ### 10. Add Gitlab CICD Variables
 - Project Settings -> CI/CD -> Variables -> Click Expand
