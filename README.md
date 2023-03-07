@@ -137,8 +137,10 @@ deploy-job:
     - npm run build
     - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir=./build --prod
 ```
-- add `image: node:18`
-  ```
+- this will produce an error, so we need to add `image: node:18`
+
+
+```
 deploy-job:
   stage: deploy
   image: node:18
